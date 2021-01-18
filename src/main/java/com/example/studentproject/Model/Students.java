@@ -16,6 +16,6 @@ public class Students {
 
     private long id;
     private String name;
-    private long identifier;
+    private long studentIdentifier;
     private String password;
 }
