@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-public class Teachers {
+public class Teacher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "teachers_generator")

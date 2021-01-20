@@ -15,22 +15,22 @@ public class SubjectTakingController {
     }
 
     @PostMapping(value = "/createSubject")
-    public SubjectTaking create(@RequestBody SubjectTaking subjectTaking){
-        return subjectTakingService.create(subjectTaking);
+    public SubjectTaking createSubjectTaking(@RequestBody SubjectTaking subjectTaking){
+        return subjectTakingService.createSubjectTaking(subjectTaking);
     }
 
     @GetMapping(value = "/Subjects")
-    public List<SubjectTaking> getAll(){
-        return subjectTakingService.getAll();
+    public List<SubjectTaking> getAllST(){
+        return subjectTakingService.getAllST();
     }
 
     @PostMapping(value = "/updateSubjectTaking")
-    private SubjectTaking update(@RequestBody SubjectTaking subjectTaking){
-        return subjectTakingService.update(subjectTaking);
+    private SubjectTaking updateSubjectTaking(@RequestBody SubjectTaking subjectTaking){
+        return subjectTakingService.updateSubjectTaking(subjectTaking);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/subjects/{id}")
-    public void delete(@PathVariable("id") Long id){
-        subjectTakingService.delete(id);
+    public void deleteSubjectTaking(@PathVariable("id") Long id){
+        subjectTakingService.deleteSubjectTaking(id);
     }
 }

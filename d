@@ -46,38 +46,38 @@
 [36m@@ -1,4 +1,37 @@[m
  package com.example.studentproject.Controller;[m
  [m
-[32m+[m[32mimport com.example.studentproject.Model.Teachers;[m
-[32m+[m[32mimport com.example.studentproject.Service.TeachersService;[m
+[32m+[m[32mimport com.example.studentproject.Model.Teacher;[m
+[32m+[m[32mimport com.example.studentproject.Service.TeacherService;[m
 [32m+[m[32mimport org.springframework.web.bind.annotation.*;[m
 [32m+[m
 [32m+[m[32mimport java.util.List;[m
 [32m+[m
 [32m+[m[32m@RestController[m
  public class TeachersController {[m
-[32m+[m[32m    public final TeachersService teachersService;[m
+[32m+[m[32m    public final TeachersService teacherService;[m
 [32m+[m
-[32m+[m[32m    public TeachersController(TeachersService teachersService){[m
-[32m+[m[32m        this.teachersService = teachersService;[m
+[32m+[m[32m    public TeachersController(TeachersService teacherService){[m
+[32m+[m[32m        this.teacherService = teacherService;[m
 [32m+[m[32m    }[m
 [32m+[m
 [32m+[m[32m    @PostMapping(path = "/createTeachers")[m
-[32m+[m[32m    private Teachers create(@RequestBody Teachers teachers){[m
-[32m+[m[32m        return teachersService.create(teachers);[m
+[32m+[m[32m    private Teachers create(@RequestBody Teachers teacher){[m
+[32m+[m[32m        return teacherService.create(teacher);[m
 [32m+[m[32m    }[m
 [32m+[m
 [32m+[m[32m    @GetMapping(path = "/Teachers")[m
 [32m+[m[32m    public List<Teachers> getAll(){[m
-[32m+[m[32m        return teachersService.getAll();[m
+[32m+[m[32m        return teacherService.getAll();[m
 [32m+[m[32m    }[m
 [32m+[m
 [32m+[m[32m    @PostMapping(path = "/updateTeachers")[m
-[32m+[m[32m    public Teachers update(@RequestBody Teachers teachers){[m
-[32m+[m[32m        return teachersService.update(teachers);[m
+[32m+[m[32m    public Teachers update(@RequestBody Teachers teacher){[m
+[32m+[m[32m        return teacherService.update(teacher);[m
 [32m+[m[32m    }[m
 [32m+[m
 [32m+[m[32m    @RequestMapping(method = RequestMethod.DELETE, value = "/teacher/{id}")[m
 [32m+[m[32m    public void delete(@PathVariable("id")Long id){[m
-[32m+[m[32m        teachersService.delete(id);[m
+[32m+[m[32m        teacherService.delete(id);[m
 [32m+[m[32m    }[m
 [32m+[m
  }[m
@@ -149,7 +149,7 @@
 [1m+++ b/src/main/java/com/example/studentproject/Repository/CoursesRepository.java[m
 [36m@@ -2,6 +2,8 @@[m [mpackage com.example.studentproject.Repository;[m
  [m
- import com.example.studentproject.Model.Courses;[m
+ import com.example.studentproject.Model.Course;[m
  import org.springframework.data.repository.CrudRepository;[m
 [32m+[m[32mimport org.springframework.stereotype.Repository;[m
  [m
@@ -162,6 +162,6 @@
 [1m+++ b/src/main/java/com/example/studentproject/Repository/StudentsRepository.java[m
 [36m@@ -2,6 +2,8 @@[m [mpackage com.example.studentproject.Repository;[m
  [m
- import com.example.studentproject.Model.Students;[m
+ import com.example.studentproject.Model.Student;[m
  import org.springframework.data.repository.CrudRepository;[m
 [32m+[m[32mimport org.spr

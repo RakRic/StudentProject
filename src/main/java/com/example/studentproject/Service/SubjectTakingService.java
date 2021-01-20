@@ -15,19 +15,19 @@ public class SubjectTakingService {
         this.subjectTakingRepository = subjectTakingRepository;
     }
 
-    public SubjectTaking create(SubjectTaking subjectTaking){
+    public SubjectTaking createSubjectTaking(SubjectTaking subjectTaking){
         return subjectTakingRepository.save(subjectTaking);
     }
 
-    public List<SubjectTaking> getAll(){
+    public List<SubjectTaking> getAllST(){
         return (List<SubjectTaking>) subjectTakingRepository.findAll();
     }
 
-    public SubjectTaking update(SubjectTaking subjectTaking){
+    public SubjectTaking updateSubjectTaking(SubjectTaking subjectTaking){
         return subjectTakingRepository.save(subjectTaking);
     }
 
-    public void delete(Long id){
+    public void deleteSubjectTaking(Long id){
         subjectTakingRepository.deleteById(id);
     }
 }
